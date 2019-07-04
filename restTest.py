@@ -68,8 +68,8 @@ def extg():
     print(crime_url)
     respons = requests.get(crime_url)
     if respons.ok:
-        print('hhh')
-        return respons.json()
+
+        return jsonify(respons.json())
     else:
         return respons.reason
 
