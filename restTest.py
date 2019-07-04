@@ -74,11 +74,15 @@ def extg():
         return respons.reason
 
 
-@app.route('/po', methods=['POST'])
+@app.route('/po', methods=['POST', 'GET'])
 def po():
-    data = request.get_json()
-    print(data['username'])
-    return jsonify({'ok': True, 'message': 'success'}), 200
+    if request.method == 'POST':
+        data = request.get_json()
+        print(data['username'])
+        return jsonify({'ok': True, 'message': 'success'}), 200
+    else:
+        respons = [i['name']for i in all_records]
+        return jsonify(respons), 200
 
 
 if __name__ == '__main__':
