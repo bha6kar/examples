@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, request
 import requests
 app = Flask(__name__)
 
@@ -72,6 +72,13 @@ def extg():
         return jsonify(respons.json())
     else:
         return respons.reason
+
+
+@app.route('/po', methods=['POST'])
+def po():
+    data = request.get_json()
+    print(data['username'])
+    return jsonify({'ok': True, 'message': 'success'}), 200
 
 
 if __name__ == '__main__':
