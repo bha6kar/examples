@@ -1,0 +1,10 @@
+http://127.0.0.1:5000/records
+
+#####
+http://127.0.0.1:5000/records/all_bands
+
+#####
+http://127.0.0.1:5000/records/albums_by_band/Radiohead
+
+#####
+http://127.0.0.1:5000/records/albums_by_band/Portishead
