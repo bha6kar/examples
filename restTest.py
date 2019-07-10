@@ -35,7 +35,7 @@ crime_url_template = 'https://data.police.uk/api/crimes-street/all-crime?lat={la
 
 @app.route('/')
 def tests():
-    return '<h4>HJe</h4>'
+    return '<h4>Hello world!!!</h4>'
 
 
 @app.route('/getall', methods=['GET'])
