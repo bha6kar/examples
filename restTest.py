@@ -45,8 +45,10 @@ def get_all():
 
 @app.route('/a', methods=['GET'])
 def album():
-    respons = [i['name']for i in all_records]
-    return jsonify(respons)
+    response = []
+    for i in all_records:
+        response.append(i)
+    return jsonify(response),504
 
 
 @app.route('/get/<album_name>', methods=['GET'])

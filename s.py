@@ -1,7 +1,7 @@
 
 def abc(a, b):
-    if 3 in a:
-        return True
+        if 3 in a:
+                return True
 
 
 list1 = [3, 1, 4, 5]
